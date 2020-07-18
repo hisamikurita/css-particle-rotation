@@ -20,3 +20,7 @@
 ● <a href="https://hisamikurita.github.io/css-particle-rotation/css-particle-rotation-03/dist/">DEMO</a>
 
 ![FireShot Capture 097 - Document - ](https://user-images.githubusercontent.com/47776346/68545958-7a3f1400-0415-11ea-9a02-6d37b28cb3a1.png)
+
+● <a href="https://hisamikurita.github.io/css-particle-rotation/css-particle-rotation-04/dist/">DEMO</a>
+
+![FireShot Capture 099 - Document - ](https://user-images.githubusercontent.com/47776346/69898331-76127080-139b-11ea-9bb5-a5be4c6e2abc.png)
