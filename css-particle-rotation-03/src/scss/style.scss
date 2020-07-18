@@ -1,0 +1,155 @@
+/* basic style */
+html,
+body {
+  position: relative;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: radial-gradient(ellipse at left top, #2a5ea1 20%, #142d65 50%, #031140);
+}
+div {
+  transform-style: preserve-3d;
+}
+.container {
+  perspective: 1300px;
+  &_rotate {
+    transform: rotate(24deg);
+  }
+}
+
+/* flip style */
+.flip {
+  position: absolute;
+  top: -280px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+@for $i from 1 through 200 {
+  .rotate:nth-of-type(#{$i}) {
+    animation: rotation linear infinite reverse;
+    animation-delay: random(4000) + 10000 * -1ms;
+    animation-duration: random(10000) + 20000 + ms;
+    @keyframes rotation {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+  .rotate:nth-of-type(#{$i}) .flip_rotate {
+    transform: rotateX(random(60) + deg);
+  }
+  .rotate:nth-of-type(#{$i}) .flip_pos {
+    transform: translateY(random(200) + 130 + px);
+  }
+  .rotate:nth-of-type(#{$i}) .flip {
+    left: calc(30% + #{random(300) + 200}px);
+  }
+}
+
+@for $i from 1 through 120 {
+  .rotate:nth-of-type(#{$i}) .flip {
+    background-color: #f9f2ee;
+    animation: rotate01 random(30000) + 3000 + ms infinite;
+    @keyframes rotate01 {
+      0% {
+        transform: scale3d(0.5, 0.5, 0.5) rotateY(0);
+        opacity: 0.6;
+      }
+      25% {
+        opacity: 0.4;
+      }
+      50% {
+        transform: scale3d(0.5, 0.5, 0.5) rotateY(180deg);
+        opacity: 0.6;
+      }
+      100% {
+        transform: scale3d(0.5, 0.5, 0.5) rotateY(180deg);
+        opacity: 0.4;
+      }
+    }
+  }
+}
+@for $i from 120 through 200 {
+  .rotate:nth-of-type(#{$i}) .flip {
+    background-color: #f9d2d3;
+    animation: rotate02 random(30000) + 3000 + ms infinite;
+    @keyframes rotate02 {
+      0% {
+        transform: scale3d(0.5, 0.5, 0.5) rotateY(0);
+        opacity: 0.4;
+      }
+      25% {
+        opacity: 0.1;
+      }
+      50% {
+        transform: scale3d(0.5, 0.5, 0.5) rotateY(180deg);
+        opacity: 0.4;
+      }
+      100% {
+        transform: scale3d(0.5, 0.5, 0.5) rotateY(180deg);
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+
+/*==============
+read
+==============*/
+
+.read {
+  position: fixed;
+  top: 4%;
+  left: 2%;
+  z-index: 10000;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.read p {
+  margin: 0 0 8px 0;
+}
+
+.read ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.read li {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+.read a {
+  color: inherit;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.read .active a {
+  border-bottom: solid 2px #fff;
+}
+
+.read a:hover {
+  color: rgb(31, 60, 248);
+}
+
+.read .active a:hover {
+  border-bottom: solid 2px rgb(31, 60, 248);
+}
